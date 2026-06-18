@@ -1,6 +1,6 @@
-[# Niri Config
+# Niri Config
 
-My personal configuration for [Niri](https://github.com/YaLithuanian/niri) on CachyOS with Noctalia shell.
+My personal configuration for Niri on CachyOS with Noctalia shell.
 
 ## Overview
 
@@ -14,9 +14,9 @@ This repository contains all the configuration files for my Niri window manager 
 
 ## Requirements
 
-- CachyOS
+- [CachyOS](https://cachyos.org/)
 - [Niri](https://github.com/YaLithuanian/niri) window manager
-- Noctalia shell
+- [Noctalia shell](https://noctalia.dev/)
 
 ## Installation
 
@@ -35,4 +35,3 @@ This repository contains all the configuration files for my Niri window manager 
 ## License
 
 Personal configuration - feel free to use as reference for your own setup.
-](https://cachyos.org/)
