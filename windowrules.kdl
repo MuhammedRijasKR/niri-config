@@ -2,43 +2,13 @@
 // Find more information on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Window-Rules
 
-// Work around WezTerm's initial configure bug
-// by setting an empty default-column-width.
-window-rule {
-    // This regular expression is intentionally made as specific as possible,
-    // since this is the default config, and we want no false positives.
-    // You can get away with just app-id="wezterm" if you want.
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
-}
 
-// Open the Firefox picture-in-picture player as floating by default.
-window-rule {
-    // This app-id regular expression will work for both:
-    // - host Firefox (app-id is "firefox")
-    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    open-floating true
-}
 
-// Example: block out two password managers from screen capture.
-// (This example rule is commented out with a "/-" in front.)
-/-window-rule {
-    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-    match app-id=r#"^org\.gnome\.World\.Secrets$"#
-
-    block-out-from "screen-capture"
-
-    // Use this instead if you want them visible on third-party screenshot tools.
-    // block-out-from "screencast"
-}
-
-// Example: enable rounded corners for all windows.
-// (This example rule is commented out with a "/-" in front.)
 window-rule {
     geometry-corner-radius 15
     clip-to-geometry true
 }
+
 
 
 
@@ -57,7 +27,7 @@ window-rule {
     default-window-height { fixed 600; }
 }
 
-// Bitwarden extension
+// Bitwarden extension Brave
 window-rule {
 	match app-id="brave-nngceckbapebfimnlniiiahkandclblb-Default"
 
@@ -69,5 +39,65 @@ window-rule {
     	off
     }
     geometry-corner-radius 20
-	
 }
+
+// Bitwarden Zen Browser
+window-rule {
+    match app-id=r#"zen"# title=r#"(?i)Bitwarden"#
+	// There is script running in Script/dynamic-float.py to overcome 
+	// the late naming of this window and the issue caused by it.
+	// this script is added in the startup.kdl as a python executable.
+	
+    max-width 400
+    max-height 600
+    block-out-from "screen-capture"
+    focus-ring {
+        off
+    }
+    geometry-corner-radius 20    
+}
+
+
+
+// Picture-in-Picture mode in Zen Browser
+window-rule {
+	match app-id="zen" title="Picture-in-Picture"
+    
+	open-floating true
+    focus-ring {
+    	off
+    }
+    geometry-corner-radius 5
+}
+
+// Zen Download page
+window-rule {
+	match app-id="zen" title="Library"
+
+	open-floating true
+	max-height 800
+	max-width 800
+	min-width 700
+}
+
+
+// Gwenview
+window-rule {
+	match app-id="gwenview$"
+
+	open-floating true
+	max-height 700
+	max-width 1000
+}
+
+// KCalc calculator
+window-rule{
+	match app-id="kcalc$" title="KCalc"
+
+	open-floating true
+	max-height 650
+	max-width 450
+	opacity 0.95
+}
+
+

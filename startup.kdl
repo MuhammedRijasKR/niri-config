@@ -27,3 +27,8 @@ prefer-no-csd
 
 spawn-at-startup "gnome-keyring-daemon" "--start" "--components=secrets"
 
+
+// Scripts
+//--------
+
+spawn-at-startup "python3" "/home/rijas/.config/niri/Scripts/dynamic-float.py"
