@@ -1,4 +1,4 @@
-# Niri Config
+[# Niri Config
 
 My personal configuration for [Niri](https://github.com/YaLithuanian/niri) on CachyOS with Noctalia shell.
 
@@ -35,3 +35,4 @@ This repository contains all the configuration files for my Niri window manager 
 ## License
 
 Personal configuration - feel free to use as reference for your own setup.
+](https://cachyos.org/)
