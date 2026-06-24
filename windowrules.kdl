@@ -81,6 +81,9 @@ window-rule {
 }
 
 
+
+
+
 // Gwenview
 window-rule {
 	match app-id="gwenview$"
@@ -101,3 +104,22 @@ window-rule{
 }
 
 
+//Spotify
+window-rule {
+	match app-id="Spotify"
+
+	open-floating true
+	max-height 900
+	min-height 800
+	//max-width 1000
+	min-width 1200
+}
+
+//cachy-update
+window-rule {
+
+	match app-id="^org\\.kde\\.konsole$" title="^~ : arch-update — Konsole$"
+	open-floating true
+	max-height 700
+	max-width 800
+}
