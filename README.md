@@ -4,7 +4,7 @@ My personal configuration for Niri on CachyOS with Noctalia shell.
 
 ## Overview
 
-This repository contains all the configuration files for my Niri window manager setup, optimized for CachyOS and Noctalia shell.
+This repository contains all the configuration files for my Niri window manager setup, for Noctalia shell.
 
 ## Contents
 
@@ -14,7 +14,7 @@ This repository contains all the configuration files for my Niri window manager 
 
 ## Requirements
 
-- [CachyOS](https://cachyos.org/)
+- [CachyOS](https://cachyos.org/) or any other OS of your choice that support Niri
 - [Niri](https://github.com/niri-wm/niri) Window Manager
 - [Noctalia shell](https://noctalia.dev/)
 
