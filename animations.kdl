@@ -36,4 +36,4 @@ animations {
 	}
 	
 }
-include "./animations/custom.kdl"
+include "./animations/polar-function.kdl"

@@ -15,7 +15,7 @@ This repository contains all the configuration files for my Niri window manager 
 ## Requirements
 
 - [CachyOS](https://cachyos.org/)
-- [Niri](https://github.com/niri-wm/niri) window manager
+- [Niri](https://github.com/niri-wm/niri) Window Manager
 - [Noctalia shell](https://noctalia.dev/)
 
 ## Installation
@@ -31,6 +31,37 @@ This repository contains all the configuration files for my Niri window manager 
    ```
 
 3. Restart Niri or reload the configuration
+
+
+## Window Animations
+
+This configuration includes multiple custom window opening and closing animations for Niri.
+
+### Using the Animations
+
+To use and switch between the included animations:
+
+1. Install **Niri Animation Picker** from the Noctalia plugin source:
+
+   * Open **Noctalia Settings**
+   * Navigate to **Plugins**
+   * Install **Niri Animation Picker**
+
+2. Configure the plugin:
+
+   * Set the animation directory to the repository's `animations` directory.
+
+3. Apply animations:
+
+   * Navigate to **Niri Animation Picker** in the **Bar**
+   * Select any animation file to instantly switch window opening and closing effects.
+
+### Animation Shaders
+
+The animation shaders included in this repository are based on the shader collection provided by: [liixini](https://github.com/liixini/shaders/)
+
+Credit goes to the original author for creating and maintaining these shaders.
+
 
 ## License
 
