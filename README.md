@@ -1,6 +1,6 @@
 # Niri Config
 
-My personal configuration for [Niri](https://github.com/YaLithuanian/niri) on CachyOS with Noctalia shell.
+My personal configuration for Niri on CachyOS with Noctalia shell.
 
 ## Overview
 
