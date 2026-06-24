@@ -32,6 +32,9 @@ This repository contains all the configuration files for my Niri window manager 
 
 3. Restart Niri or reload the configuration
 
+## Noctalia Settings
+
+* `noctalia.json` contains my personal settings configuration for Noctalia. 
 
 ## Window Animations
 
