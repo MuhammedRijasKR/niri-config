@@ -36,4 +36,4 @@ animations {
 	}
 	
 }
-include "./animations/polar-function.kdl"
+include "./animations/ink-splash.kdl"

@@ -55,6 +55,11 @@ RULES = [
         [
             Match(app_id="zen", title="(?i)Bitwarden")
         ]
+    ),
+    Rule(
+        [
+            Match(app_id='zen', title="^Page Info")
+        ]
     )
 ]
 

@@ -17,6 +17,22 @@ window-rule {
 //personal window rules
 //-----------------------
 
+window-rule {
+  background-effect {
+    blur true
+    // xray false
+  }
+}
+
+blur {
+  passes 2        // more passes = stronger blur (default: 3)
+  offset 3.0      // sample distance per pass (default: 3.0)
+  noise 0.03      // grain overlay (default: 0.02)
+  saturation 1.0  // color saturation boost (default: 1.5)
+}
+
+
+
 // Btop
 window-rule {
     match app-id="floating-btop"
@@ -33,13 +49,25 @@ window-rule {
 
     
 	open-floating true
-    opacity 0.8
     block-out-from "screen-capture"
     focus-ring {
     	off
     }
     geometry-corner-radius 20
 }
+
+// Bitwarden extension Chromium
+window-rule {
+	match app-id="chrome-nngceckbapebfimnlniiiahkandclblb-Default"
+    
+	open-floating true
+    block-out-from "screen-capture"
+    focus-ring {
+    	off
+    }
+    geometry-corner-radius 20
+}
+
 
 // Bitwarden Zen Browser
 window-rule {
@@ -80,7 +108,23 @@ window-rule {
 	min-width 700
 }
 
+// Zen site info page
+window-rule {
+	match app-id="zen" title="^Page Info"
 
+	open-floating true
+	// default-column-width { fixed 900; }
+	// default-window-height { fixed 700; }
+	max-width 700
+	max-height 800
+}
+
+
+// Steam notification
+window-rule {
+    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+}
 
 
 
@@ -115,11 +159,28 @@ window-rule {
 	min-width 1200
 }
 
+//spotify mini player
+window-rule {
+
+	match app-id="Chromium-browser"
+	open-floating true
+	max-height 700
+	max-width 800
+}
+
 //cachy-update
 window-rule {
 
 	match app-id="^org\\.kde\\.konsole$" title="^~ : arch-update — Konsole$"
 	open-floating true
-	max-height 700
-	max-width 800
+	max-height 500
+	max-width 600
+}
+
+
+// Telegram
+window-rule {
+	match app-id="org.telegram.desktop"
+
+	open-floating true
 }
