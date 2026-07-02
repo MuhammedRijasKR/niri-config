@@ -7,31 +7,24 @@
 window-rule {
     geometry-corner-radius 15
     clip-to-geometry true
+    background-effect {
+    	blur true
+    	// xray false
+    }
 }
 
-
+blur {
+	 passes 2        // more passes = stronger blur (default: 3)
+	 offset 3.0      // sample distance per pass (default: 3.0)
+	 noise 0.03      // grain overlay (default: 0.02)
+	 saturation 1.0  // color saturation boost (default: 1.5)
+}
 
 
 
 
 //personal window rules
 //-----------------------
-
-window-rule {
-  background-effect {
-    blur true
-    // xray false
-  }
-}
-
-blur {
-  passes 2        // more passes = stronger blur (default: 3)
-  offset 3.0      // sample distance per pass (default: 3.0)
-  noise 0.03      // grain overlay (default: 0.02)
-  saturation 1.0  // color saturation boost (default: 1.5)
-}
-
-
 
 // Btop
 window-rule {
@@ -84,7 +77,6 @@ window-rule {
     }
     geometry-corner-radius 20    
 }
-
 
 
 // Picture-in-Picture mode in Zen Browser
@@ -157,6 +149,9 @@ window-rule {
 	min-height 800
 	//max-width 1000
 	min-width 1200
+	opacity 0.9
+	draw-border-with-background false
+
 }
 
 //spotify mini player
@@ -183,4 +178,33 @@ window-rule {
 	match app-id="org.telegram.desktop"
 
 	open-floating true
+	opacity 0.8
+	draw-border-with-background false
+
+}
+
+// VS Code 
+window-rule {
+	match app-id="code"
+
+	opacity 0.9
+	draw-border-with-background false
+	
+}
+
+
+// Kitty
+window-rule {
+	match app-id="kitty"
+
+	draw-border-with-background false
+	
+}
+
+//Dolphin
+window-rule {
+	match app-id="org.kde.dolphin"
+	opacity 0.9
+	draw-border-with-background false
+	
 }

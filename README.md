@@ -16,7 +16,7 @@ This repository contains all the configuration files for my Niri window manager 
 
 - [CachyOS](https://cachyos.org/) or any other OS of your choice that support Niri
 - [Niri](https://github.com/niri-wm/niri) Window Manager
-- [Noctalia shell](https://noctalia.dev/)
+- [Noctalia shell](https://noctalia.dev/) V4 Stable
 
 ## Installation
 
@@ -65,7 +65,3 @@ The animation shaders included in this repository are based on the shader collec
 
 Credit goes to the original author for creating and maintaining these shaders.
 
-
-## License
-
-Personal configuration - feel free to use as reference for your own setup.
