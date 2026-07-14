@@ -36,4 +36,4 @@ animations {
 	}
 	
 }
-include "./animations/voronoi-shatter.kdl"
+include "./animations/ink-splash.kdl"

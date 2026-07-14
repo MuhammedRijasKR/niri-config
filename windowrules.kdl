@@ -20,7 +20,29 @@ blur {
 	 saturation 1.0  // color saturation boost (default: 1.5)
 }
 
+debug {
+  // Allows notification actions and window activation from Noctalia.
+  honor-xdg-activation-with-invalid-serial
+}
 
+// Set the regular wallpaper on the backdrop.
+layer-rule {
+  match namespace="^noctalia-wallpaper*"
+  place-within-backdrop true
+}
+
+// Set transparent workspace background color so you see the backdrop at all times.
+layout {
+  background-color "transparent"
+}
+
+// Optionally, disable the workspace shadows in the overview.
+overview {
+  workspace-shadow {
+    softness 30
+    spread 7
+  }
+}
 
 
 //personal window rules
@@ -31,9 +53,6 @@ window-rule {
     match app-id="floating-btop"
     
     open-floating true
-    
-    default-column-width { proportion 0.6; }
-    default-window-height { fixed 600; }
 }
 
 // Bitwarden extension Brave
@@ -145,10 +164,6 @@ window-rule {
 	match app-id="Spotify"
 
 	open-floating true
-	max-height 900
-	min-height 800
-	//max-width 1000
-	min-width 1200
 	opacity 0.9
 	draw-border-with-background false
 
@@ -168,8 +183,6 @@ window-rule {
 
 	match app-id="^org\\.kde\\.konsole$" title="^~ : arch-update — Konsole$"
 	open-floating true
-	max-height 500
-	max-width 600
 }
 
 
@@ -196,6 +209,14 @@ window-rule {
 // Kitty
 window-rule {
 	match app-id="kitty"
+
+	draw-border-with-background false
+	
+}
+
+// Ghostty
+window-rule {
+	match app-id="com.mitchellh.ghostty"
 
 	draw-border-with-background false
 	

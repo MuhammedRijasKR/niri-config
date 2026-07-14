@@ -12,7 +12,7 @@ spawn-at-startup "waybar"
 //Noctalia V4
 spawn-at-startup "qs" "-c" "noctalia-shell"
 
-//Noctalia V5
+// Noctalia V5
 // spawn-at-startup "noctalia"
 
 
