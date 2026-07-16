@@ -229,3 +229,9 @@ window-rule {
 	draw-border-with-background false
 	
 }
+
+//Stremio Enhanced
+window-rule {
+	match app-id="stremio-enhanced"
+	open-maximized true
+}
