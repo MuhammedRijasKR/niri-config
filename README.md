@@ -61,7 +61,7 @@ To use and switch between the included animations:
 
 ### Animation Shaders
 
-The animation shaders included in this repository are based on the shader collection provided by: [liixini](https://github.com/liixini/shaders/)
+The animation shaders included in this repository are based on the shader collection provided by: [liixini](https://github.com/liixini/shaders/), [IT2669-Stephin](https://github.com/IT2669-Stephin/linux-ricing/tree/main/New%20niri%20animations/)
 
 Credit goes to the original author for creating and maintaining these shaders.
 
