@@ -10,10 +10,10 @@ spawn-at-startup "waybar"
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
 //Noctalia V4
-spawn-at-startup "qs" "-c" "noctalia-shell"
+// spawn-at-startup "qs" "-c" "noctalia-shell"
 
 // Noctalia V5
-// spawn-at-startup "noctalia"
+spawn-at-startup "noctalia"
 
 
 // Add this line to automatically start your authentication prompt
@@ -33,6 +33,7 @@ prefer-no-csd
 
 
 spawn-at-startup "gnome-keyring-daemon" "--start" "--components=secrets"
+spawn-at-startup "easyeffects" "--gapplication-service"
 
 
 // Scripts

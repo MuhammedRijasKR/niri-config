@@ -164,7 +164,7 @@ window-rule {
 	match app-id="Spotify"
 
 	open-floating true
-	opacity 0.9
+	opacity 0.8
 	draw-border-with-background false
 
 }
@@ -234,4 +234,13 @@ window-rule {
 window-rule {
 	match app-id="stremio-enhanced"
 	open-maximized true
+}
+
+//easy effects
+window-rule {
+    match app-id="com.github.wwmm.easyeffects"
+    open-floating true
+    // default-column-width { proportion 0.4; }
+    default-column-width { fixed 1000; }
+    default-window-height { fixed 700; }
 }

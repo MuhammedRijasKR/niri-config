@@ -1,0 +1,336 @@
+config_version = 8
+
+[bar.default]
+background_opacity = 0.57999998703598976
+center = [ "workspaces" ]
+concave_edge_corners = true
+end = [ "privacy", "notifications", "tray", "volume", "brightness", "battery", "bar", "bluetooth", "network", "launcher" ]
+margin_edge = 0
+margin_ends = 0
+radius = 0
+radius_bottom_left = 80
+radius_bottom_right = 79
+start = [ "clock", "date", "weather", "spacer_5", "cpu", "ram", "spacer_3", "media", "audio_visualizer" ]
+widget_spacing = 10
+
+    [bar.default.dead_zone.actions]
+    scroll_down = "volume-down 2"
+    scroll_up = "volume-up 2"
+
+[battery]
+warning_threshold = 20
+
+[brightness]
+minimum_brightness = 0.0099999997764825821
+
+[desktop_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "desktop-widget-0000000000000001" ]
+
+    [desktop_widgets.grid]
+    cell_size = 24
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000001]
+    box_height = 112.0
+    box_width = 320.0
+    cx = 1672.0
+    cy = 172.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "clock"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000001.settings]
+        background = false
+        center_text = false
+        clock_style = "digital"
+        color = "primary"
+        format = "{:%-I:%M %p}"
+        shadow = true
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+pre_action_fade_seconds = 5
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 600.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = true
+    timeout = 900.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 660.0
+
+[location]
+address = "Kozhikode, Kerala"
+latitude = 11.472174000000001
+longitude = 76.028998999999999
+
+[lockscreen]
+fingerprint = false
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [
+    "lockscreen-login-box@winit",
+    "lockscreen-login-box@eDP-1",
+    "lockscreen-widget-0000000000000001",
+    "lockscreen-widget-0000000000000002",
+    "lockscreen-widget-0000000000000003",
+    "lockscreen-widget-0000000000000004"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 8
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 958.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = true
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = false
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@winit"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 473.0
+    cy = 844.0
+    output = "winit"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@winit".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    box_height = 160.0
+    box_width = 488.0
+    cx = 960.0
+    cy = 236.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
+        background = false
+        center_text = false
+        clock_style = "digital"
+        format = "{:%-I:%M %p}"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
+    box_height = 96.0
+    box_width = 584.0
+    cx = 960.0
+    cy = 540.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "audio_visualizer"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000002.settings]
+        background = false
+        bands = 44
+        show_when_idle = false
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000003]
+    box_height = 128.0
+    box_width = 320.0
+    cx = 192.0
+    cy = 989.5
+    output = "eDP-1"
+    rotation = 0.0
+    type = "sysmon"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000003.settings]
+        background = true
+        stat = "cpu_usage"
+        stat2 = "cpu_temp"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000004]
+    box_height = 128.0
+    box_width = 320.0
+    cx = 1728.0
+    cy = 989.5
+    output = "eDP-1"
+    rotation = 0.0
+    type = "media_player"
+
+[notification]
+history_retention_hours = 36
+
+[osd]
+position = "bottom_center"
+position_vertical = "center_right"
+
+[plugin_settings."alexander/screen-toolkit"]
+hide-cursor = false
+panel_open_near_click = true
+panel_placement = "attached"
+record-audio-out = true
+record-fps = 30
+video-path = "/home/rijas/Videos/Recordings"
+
+[plugin_settings."imjustdoingmypart/niri-animations"]
+target_file = "~/.config/niri/animationpicker.kdl"
+
+[plugin_settings."nightwatch75/todo"]
+panel_placement = "floating"
+panel_position = "center"
+
+[plugins]
+enabled = [
+    "yuuto/calculator",
+    "blackbartblues/keymap",
+    "imjustdoingmypart/niri-animations",
+    "alexander/screen-toolkit",
+    "cleboost/ssh-launcher",
+    "nightwatch75/todo"
+]
+
+[shell]
+external_ip_enabled = true
+font_family = "Bitstream Vera Serif"
+password_style = "random"
+screen_time_enabled = true
+settings_show_advanced = true
+time_format = "{:%-I:%M %p}"
+
+    [shell.launcher]
+    app_grid = true
+
+    [shell.panel]
+    open_near_click_control_center = true
+    session_position = "center"
+    wallpaper_position = "bottom_left"
+
+    [shell.screen_corners]
+    enabled = true
+    size = 28
+
+    [shell.screenshot]
+    directory = "/home/rijas/Pictures/Screenshots"
+
+[theme]
+builtin = "Ayu"
+community_palette = "Ayu Blue"
+custom_palette = "b-374-mc"
+mode = "dark"
+source = "wallpaper"
+wallpaper_scheme = "m3-content"
+
+    [theme.templates]
+    builtin_ids = [ "btop", "gtk3", "gtk4", "ghostty", "kitty", "niri", "qt" ]
+    community_ids = [ "spicetify", "zen-browser", "telegram", "libreoffice", "neovim", "vscode", "fastfetch" ]
+
+[wallpaper]
+transition = [ "disc", "honeycomb", "stripes", "wipe", "zoom" ]
+transition_on_startup = true
+
+    [wallpaper.default]
+    path = "/home/rijas/Pictures/Wallpapers/b-871.jpg"
+
+    [wallpaper.last]
+    path = "/home/rijas/Pictures/Wallpapers/b-871.jpg"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/rijas/Pictures/Wallpapers/b-871.jpg"
+
+    [[wallpaper.favorite]]
+    palette_source = "wallpaper"
+    path = "/home/rijas/Pictures/Wallpapers/b-193.jpg"
+    theme_mode = "dark"
+    wallpaper_scheme = "m3-content"
+
+[weather]
+refresh_minutes = 60
+
+[widget.audio_visualizer]
+bands = 32
+width = 128
+
+[widget.bar]
+type = "yuuto/calculator:bar"
+
+[widget.clock]
+format = "{:%-I:%M %p}"
+
+[widget.cpu]
+display = "text"
+
+[widget.media]
+hide_artist = true
+hide_when_no_media = true
+max_length = 140
+title_scroll = "on_hover"
+
+[widget.network]
+show_label = false
+
+[widget.notifications]
+hide_when_no_unread = true
+
+[widget.privacy]
+hide_inactive = true
+
+[widget.ram]
+display = "text"
+label_show_units = false
+
+[widget.spacer_3]
+type = "spacer"
+
+[widget.spacer_5]
+type = "spacer"
+
+[widget.taskbar]
+inactive_opacity = 0.80000000000000004
+only_active_workspace = true
+
+[widget.tray]
+drawer = true
+drawer_item_size = 22.0
+
+[widget.workspaces]
+hide_when_empty = true
+labels_only_when_occupied = true

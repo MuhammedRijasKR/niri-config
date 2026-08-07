@@ -16,7 +16,7 @@ This repository contains all the configuration files for my Niri window manager 
 
 - [CachyOS](https://cachyos.org/) or any other OS of your choice that support Niri
 - [Niri](https://github.com/niri-wm/niri) Window Manager
-- [Noctalia shell](https://noctalia.dev/) V4 Stable
+- [Noctalia shell](https://noctalia.dev/) V5 Stable
 
 ## Installation
 
@@ -44,20 +44,21 @@ This configuration includes multiple custom window opening and closing animation
 
 To use and switch between the included animations:
 
-1. Install **Niri Animation Picker** from the Noctalia plugin source:
+1. Install **Niri Animations** from the Noctalia plugin source:
 
    * Open **Noctalia Settings**
    * Navigate to **Plugins**
-   * Install **Niri Animation Picker**
+   * Install **Niri Animations**
 
 2. Configure the plugin:
 
-   * Set the animation directory to the repository's `animations` directory.
+   * Set the Presets directory to the repository's `animations` directory.
+   * Set the Target file to the repository's `animationpicker.kdl` file.
 
 3. Apply animations:
 
-   * Navigate to **Niri Animation Picker** in the **Bar**
-   * Select any animation file to instantly switch window opening and closing effects.
+   * Use `Super+A` to open animatoin picker
+   * Select any animation file to instantly switch animation effects.
 
 ### Animation Shaders
 
@@ -65,3 +66,20 @@ The animation shaders included in this repository are based on the shader collec
 
 Credit goes to the original author for creating and maintaining these shaders.
 
+### Other Plugins Used
+
+All of them can be installed from Noctalia Plugin Store. Includes both Official and Community plugins
+
+1. [Calculator](https://noctalia.dev/plugins/community/calculator)
+2. [SSH Launcher](https://noctalia.dev/plugins/community/ssh-launcher)
+3. [Keymap](https://noctalia.dev/plugins/community/keymap)			-> `Super+Shift+Slash`
+4. [Niri Animations](https://noctalia.dev/plugins/community/niri-animations)	-> `Super+A`
+5. [Screen Toolkit](https://noctalia.dev/plugins/community/screen-toolkit)	-> `Super+Print`
+6. [To Do](https://noctalia.dev/plugins/community/todo)			-> `Super+D`
+
+### Important KeyBinds
+
+* `Super+Return`	-> Open Ghostty (Terminal)
+* `Super+Q`			-> Close
+* `Super+B`			-> Open Zen Browser
+* `Ctrl+Alt+Delete`	-> Open Session Panel
