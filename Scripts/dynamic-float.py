@@ -53,7 +53,8 @@ RULES = [
     # --- YOUR POPULATED RULE FIXED ---
     Rule(
         [
-            Match(app_id="zen", title="(?i)Bitwarden")
+            # Force case-insensitivity on the strict prefix structure
+            Match(app_id="zen", title="(?i)^Extension: \(Bitwarden Password Manager\)")
         ]
     ),
     Rule(

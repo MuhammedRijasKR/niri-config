@@ -60,6 +60,8 @@ binds {
     Mod+Tab repeat=false { toggle-overview; }
 
     Mod+Q repeat=false { close-window; }
+    Mod+Shift+Q repeat=false { spawn-sh "niri msg --json focused-window | jq '.pid' | xargs kill"; }
+ 	
 
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }
@@ -253,8 +255,8 @@ binds {
     Mod+Shift+Equal { set-window-height "+10%"; }
 
     // Move the focused window between the floating and the tiling layout.
-    Mod+Alt+Space       { toggle-window-floating; }
-    Mod+Shift+Space { switch-focus-between-floating-and-tiling; }
+    Mod+Shift+Space       { toggle-window-floating; }
+    Mod+Alt+Space { switch-focus-between-floating-and-tiling; }
 
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,
@@ -324,7 +326,7 @@ binds {
 	// Core Functions
 	//################
 	
-    Mod+Space repeat=false hotkey-overlay-title="Open App Launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
+    	Mod+Space repeat=false hotkey-overlay-title="Open App Launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
 	// Mod+Return repeat=false hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
 	// Mod+Return repeat=false hotkey-overlay-title="Open a Terminal: Kitty" { spawn "kitty"; }
 	Mod+Return repeat=false hotkey-overlay-title="Open a Terminal: Ghostty" { spawn "ghostty"; }
@@ -397,9 +399,9 @@ binds {
 	//Plugin control
 	//###############
 	Mod+A hotkey-overlay-title="Change Animation" { spawn-sh "noctalia msg panel-toggle imjustdoingmypart/niri-animations:docked";}
-    Mod+Shift+Slash hotkey-overlay-title="Keymap" {  spawn-sh "noctalia msg panel-toggle blackbartblues/keymap:panel"; }
-    Mod+Print hotkey-overlay-title="Screen Toolkit" {  spawn-sh "noctalia msg plugin alexander/screen-toolkit:service all toggle"; }
-    Mod+D hotkey-overlay-title="Open Todo List" {  spawn-sh "noctalia msg panel-toggle nightwatch75/todo:panel"; }
+    	Mod+Shift+Slash hotkey-overlay-title="Keymap" {  spawn-sh "noctalia msg panel-toggle blackbartblues/keymap:panel"; }
+    	Mod+Print hotkey-overlay-title="Screen Toolkit" {  spawn-sh "noctalia msg plugin alexander/screen-toolkit:service all toggle"; }
+    	Mod+D hotkey-overlay-title="Open Todo List" {  spawn-sh "noctalia msg panel-toggle nightwatch75/todo:panel"; }
 
 
 	//Misc

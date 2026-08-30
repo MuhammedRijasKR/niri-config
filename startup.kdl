@@ -33,7 +33,9 @@ prefer-no-csd
 
 
 spawn-at-startup "gnome-keyring-daemon" "--start" "--components=secrets"
-spawn-at-startup "easyeffects" "--gapplication-service"
+spawn-at-startup "dbus-update-activation-environment" "--all"
+spawn-at-startup "sh" "-c" "sleep 3 && easyeffects --hide-window"
+
 
 
 // Scripts

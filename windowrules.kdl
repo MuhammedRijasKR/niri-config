@@ -68,6 +68,7 @@ window-rule {
     geometry-corner-radius 20
 }
 
+
 // Bitwarden extension Chromium
 window-rule {
 	match app-id="chrome-nngceckbapebfimnlniiiahkandclblb-Default"
@@ -82,11 +83,14 @@ window-rule {
 
 
 // Bitwarden Zen Browser
+
 window-rule {
-    match app-id=r#"zen"# title=r#"(?i)Bitwarden"#
 	// There is script running in Script/dynamic-float.py to overcome 
 	// the late naming of this window and the issue caused by it.
-	// this script is added in the startup.kdl as a python executable.
+	// this script is added in the startup.kdl as a python executable
+
+    // Strictly matches only when the window title begins with the Extension prefix
+    match app-id=r#"^zen(-.*)?$"# title=r#"^Extension: \(Bitwarden Password Manager\)"#
 	
     max-width 400
     max-height 600
@@ -96,6 +100,8 @@ window-rule {
     }
     geometry-corner-radius 20    
 }
+
+
 
 
 // Picture-in-Picture mode in Zen Browser
